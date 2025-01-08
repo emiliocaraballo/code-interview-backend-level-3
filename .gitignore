@@ -1,2 +1,8 @@
 node_modules
 mock.ts
+dist
+.vscode
+.env
+package-lock.json
+npm-debug.log
+docker-compose.yml
