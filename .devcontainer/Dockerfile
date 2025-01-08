@@ -1,4 +1,4 @@
-FROM node:20
+FROM node:20.18.1-slim
 
 # Install basic development tools
 RUN apt update && apt install -y less man-db sudo
