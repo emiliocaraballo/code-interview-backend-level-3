@@ -1,0 +1,37 @@
+services:
+  postgres-db-item:
+    image: postgres:16
+    container_name: postgres-db-item
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: bdname
+      
+    ports:
+      - "5434:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      # - ./init-scripts:/docker-entrypoint-initdb.d
+
+  # service-items:
+  #   build:
+  #     context: ./
+  #     dockerfile: Dockerfile
+  #   container_name: service-items
+  #   environment:
+  #     DATABASE_HOST: postgres-db-item
+  #     DATABASE_PORT: 5432
+  #     DATABASE_USER: postgres
+  #     DATABASE_PASSWORD: 1234
+  #     DATABASE_NAME: bdname
+  #     NODE_ENV: 'local'
+  #     PORT: 3000
+  #     HOST: 0.0.0.0
+  #     DATABASE_SYNCHRONIZE: 'true' # si es true que la tabla automaticamente con el ejemplo de los models
+  #   ports:
+  #     - "${PORT}:${PORT}"
+  #   depends_on:
+  #     - postgres-db-item
+
+volumes:
+  postgres_data:
