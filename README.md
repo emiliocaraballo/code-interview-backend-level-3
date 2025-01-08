@@ -151,7 +151,7 @@ $ http://localhost:3000/items              # PUT
 $ http://localhost:3000/items              # DELETE
 
 Documentación en Swagger 
-$ http://localhost:3000/api-docs#/
+$ http://localhost:3000/api-docs/
 ```
 
 ## Test
